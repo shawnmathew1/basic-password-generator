@@ -5,6 +5,7 @@ const numbersCheckbox = document.getElementById('numbers');
 const symbolsCheckbox = document.getElementById('symbols');
 const generateButton = document.getElementById('generateButton');
 const resultDiv = document.getElementById('result');
+const copyButton = document.getElementById('copyButton');
 
 
 const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
@@ -39,3 +40,19 @@ function generatePassword() {
 
 
 generateButton.addEventListener('click', generatePassword);
+
+copyButton.addEventListener('click', () => {
+    const password = resultDiv.textContent;
+    if (!password || password === 'Please select at least one character type!') {
+        alert('Generate a password first!');
+        return;
+    }
+
+    navigator.clipboard.writeText(password)
+        .then(() => {
+            alert('Password copied to clipboard!');
+        })
+        .catch(err => {
+            console.error('Failed to copy:', err);
+        });
+});
