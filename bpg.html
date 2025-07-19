@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <title>Basic Password Generator</title>
+    </head>
+
+    <body>
+        <h2>Basic Password Generator</h2>
+
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" min="8" max="32" value="16"/>
+
+        <label><input type="checkbox" id="uppercase" checked /></label>
+        <label><input type="checkbox" id="lowercase" checked /></label>
+        <label><input type="checkbox" id="numbers" checked /></label>
+        <label><input type="checkbox" id="symbols" checked /></label>
+
+        <button id="generateButton">Generate Password</button>
+
+        <div id="result"></div>
+
+        <button id="copyButton">Copy to Clipboard</button>
+
+    </body>
+
+
+
+</html>
