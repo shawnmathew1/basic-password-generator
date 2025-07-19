@@ -5,25 +5,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width initial-scale=1">
         <title>Basic Password Generator</title>
+        <link rel="stylesheet" href="bpg.css">
     </head>
 
     <body>
-        <h2>Basic Password Generator</h2>
+        <div id="box">
+             <h2>Basic Password Generator</h2>
 
-        <label for="length">Password Length:</label>
-        <input type="number" id="length" min="8" max="32" value="16"/>
+            <label for="length">Password Length:</label>
+            <input type="number" id="length" min="8" max="32" value="16"/>
 
-        <label><input type="checkbox" id="uppercase" checked /></label>
-        <label><input type="checkbox" id="lowercase" checked /></label>
-        <label><input type="checkbox" id="numbers" checked /></label>
-        <label><input type="checkbox" id="symbols" checked /></label>
+            <label><input type="checkbox" id="uppercase" checked /></label>
+            <label><input type="checkbox" id="lowercase" checked /></label>
+            <label><input type="checkbox" id="numbers" checked /></label>
+            <label><input type="checkbox" id="symbols" checked /></label>
 
-        <button id="generateButton">Generate Password</button>
+            <button id="generateButton">Generate Password</button>
 
-        <div id="result"></div>
+            <div id="result"></div>
 
-        <button id="copyButton">Copy to Clipboard</button>
+            <button id="copyButton">Copy to Clipboard</button>
+        </div>
+       
 
+        <script src="bpg.js"></script>
     </body>
 
 
